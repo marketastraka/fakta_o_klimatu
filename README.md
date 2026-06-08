@@ -1,2 +1,31 @@
-# fakta_o_klimatu
-zadání pro fakta o klimatu
+**KAYA DECOMPOSITION & WORLD BANK DATA ANALYSIS**
+
+Tento projekt analyzuje vztahy mezi emisemi CO2, spotřebou energie, HDP a populací pomocí Kaya identity dekompozice. Data jsou kombinací World Bank API a EDGAR datasetu.
+
+**CO PROJEKT DĚLÁ**
+- stahuje makroekonomická data z World Bank API
+- načítá emisní data CO2 z EDGAR datasetu
+- přepočítává energetické a emisní ukazatele na celkové hodnoty
+- počítá meziroční změny v procentech
+- aplikuje Kaya dekompozici
+- vytváří vizualizace časové změny faktorů pro jednotlivé země a cross-country dashboard
+
+**POUŽITÁ DATA**
+
+World Bank API:
+
+- Population: SP.POP.TOTL
+- GDP per capita: NY.GDP.PCAP.CD
+- Energy use per capita: EG.USE.PCAP.KG.OE
+- Energy use per GDP: EG.USE.COMM.GD.PP.KD
+- GDP total: NY.GDP.MKTP.CD
+
+EDGAR dataset:
+
+- CO2 emise podle zemí (1970–2024) - https://edgar.jrc.ec.europa.eu/
+
+**JAK SPUSTIT**
+
+- pip install pandas numpy matplotlib requests openpyxl
+- python data_glimpse.py
+
