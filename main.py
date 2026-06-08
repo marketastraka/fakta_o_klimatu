@@ -226,14 +226,7 @@ def plot_changes(country_code, set_title="Kaya decomposition"):
     ax.set_yticks(np.arange(np.floor(y_min), np.ceil(y_max) + 1, 2))
 
     plt.show()
-
-plot_changes("USA")
-plot_changes("CZE")
-plot_changes("IND")
-plot_changes("DEU")
-plot_changes("CHN")
-plot_changes("VNM")
-
+    plt.savefig(f"kaya_{country_code}.png", dpi=300)
 
 
 
@@ -310,5 +303,16 @@ def plot_dashboard(countries):
     plt.colorbar(scatter, label="GDP per capita growth (last 5y avg)")
 
     plt.show()
+    plt.savefig("kaya_dashboard.png", dpi=300)
 
+
+# PLOT 1 - jednotlivé grafy pro vybrané země
+plot_changes("USA")
+plot_changes("CZE")
+plot_changes("IND")
+plot_changes("DEU")
+plot_changes("CHN")
+plot_changes("VNM")
+
+# PLOT 2 - dashboard pro porovnání zemí
 plot_dashboard(["CZE", "DEU", "IND", "NPL","USA", "CHN", "ITA", "ESP", "FRA", "RUS", "BRA", "ZAF", "MEX", "JPN", "KOR", "AUS", "CAN", "GBR", "TUR", "SAU", "ARG", "KAZ", "NOR", "VNM", "EGY", "IRN", "PAK", "IDN", "DZA", "MAR", "UKR", "ROU", "GRC", "HUN", "PRT", "CYP", "LTU", "LVA", "EST", "NER", "ETH", "PHL", "GHA", "SSD", "KEN"])
