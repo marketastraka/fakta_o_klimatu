@@ -28,5 +28,5 @@ EDGAR dataset:
 
 - pip install pandas numpy matplotlib requests openpyxl
 - vytvořit podsložku EDGAR, do které se vloží stažený EDGAR dataset NEBO přímo upravit kód EDGAR_FILE = child_file("EDGAR", "IEA_EDGAR_CO2_1970_2024.xlsx") >> nahradit **EDGAR_FILE = r"C://umisteni_souboru/IEA_EDGAR_CO2_1970_2024.xlsx"**
-- python data_glimpse.py
+- python main.py
 
